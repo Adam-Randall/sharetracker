@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row ">
+    <h2>All Shares</h2>
+  </div>
+  <div>
+    <table  class="table table-condensed table-hover">
+      <tr>
+        <th class="col-sm-1">Tracking</th>
+        <th class="col-sm-1">Code</th>
+        <th class="col-sm-4">Name</th>
+        <th class="col-sm-2">Security Type</th>
+        <th class="col-sm-1">View</th>
+      </tr>
+      <% @shares.each do | share | %>
+          <td></td>
+          <td><%= share.code %></td>
+          <td><%= share.name %></td>
+          <td><%= share.security_type %></td>
+          <td>
+            <div class="btn-group">
+              <%= show_share_button show_share_path(id: share.id) %>
+            </div>
+          </td>
+      </tr>
+    <% end %>
+    </table>
+  </div>
+</div>

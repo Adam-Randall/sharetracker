@@ -1,0 +1,10 @@
+<div id="flash-anchor"></div>
+<% flash.each do |type, message| %>
+  <div class="row">
+    <div class="alert <%= flash_class(type) %> col-sm-6 col-sm-offset-3 alert-fade">
+      <button class="close" data-dismiss="alert">×</button>
+      <%= message %>
+    </div>
+  </div>
+<% end %>
+<% flash.discard %>

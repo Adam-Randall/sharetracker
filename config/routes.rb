@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
 
   resource :shares
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'user#index'
 
+   get 'shares/index' => 'shares'
+   get 'shares/:id' => 'shares#show', as: :show_share
+
+   root 'users#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

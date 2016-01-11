@@ -1,3 +1,47 @@
 // Place all the styles related to the user controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$white: #FBFBFB;
+$off-white: #f2f2f2;
+
+$green-sea: #16A085;
+$turquoise: #1ABC9C;
+
+$wet-asphalt: #34495E;
+$navel-blue: #0060a1;
+$light-blue: #3396d2;
+
+$alizarin: #E74C3C;
+$pomegranate: #C0392B;
+
+$clouds: #ECF0F1;
+$silver: #BDC3C7;
+$text-color: $wet-asphalt;
+
+
+$link-color: $green-sea;
+$link-hover-color: $turquoise;
+
+
+.navbar.navbar-inverse {
+  border-radius: 0;
+  background-color: $navel-blue;
+  color: $clouds;
+
+  .navbar-brand, .navbar-nav > li > a {
+  	padding-right: 25px;
+    color: $clouds;
+  	font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 1px;
+  }
+  .navbar-nav > .active > a {
+    background-color: $navel-blue;
+    color: $clouds;
+  }
+
+    .navbar-nav > .active > a.hover {
+    background-color: $navel-blue;
+    color: $light-blue;
+  }
+}

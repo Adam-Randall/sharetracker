@@ -22,6 +22,8 @@ gem 'sidetiq'
 gem 'foreman'
 gem 'unicorn-rails'
 
+gem "font-awesome-rails"
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -33,9 +35,20 @@ gem 'unicorn-rails'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+	#jazz hands
+	gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'pry-git'
+  gem 'pry-stack_explorer'
+  gem 'pry-remote'
+  gem 'hirb'
+  gem 'coolline'
+  gem 'awesome_print'
+  gem 'railties'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'pry'
   gem 'pry-nav'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
