@@ -20,7 +20,7 @@ default: &default
   host: localhost 
   username: docker
   password: docker
-  port: 5400
+  port: 5432
 
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling

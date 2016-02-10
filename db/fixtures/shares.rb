@@ -4,7 +4,7 @@ puts 'Seeding Shares'
 Share.seed(:id,
   {:name => "Abano Healthcare Group Limited Ordinary Shares", :code => "ABA", :website_address => "https://www.nzx.com/markets/NZSX/securities/ABA"},
 {:name => "Australian Foundation Investment Company Limited Ord Shares", :code => "AFI", :website_address => "https://www.nzx.com/markets/NZSX/securities/AFI"},
-{:name => "Australian Foundation Investment Company Ltd New Ord Shares", :code => "AFIND", :website_address => "https://www.nzx.com/markets/NZSX/securities/AFIND"},
+#{:name => "Australian Foundation Investment Company Ltd New Ord Shares", :code => "AFIND", :website_address => "https://www.nzx.com/markets/NZSX/securities/AFIND"},
 {:name => "Auckland International Airport Limited Ordinary Shares", :code => "AIA", :website_address => "https://www.nzx.com/markets/NZSX/securities/AIA"},
 {:name => "Air New Zealand Limited (NS) Ordinary Shares", :code => "AIR", :website_address => "https://www.nzx.com/markets/NZSX/securities/AIR"},
 {:name => "Allied Farmers Limited Ordinary Shares", :code => "ALF", :website_address => "https://www.nzx.com/markets/NZSX/securities/ALF"},
@@ -66,7 +66,7 @@ Share.seed(:id,
 {:name => "Hellaby Holdings Limited Ordinary Shares", :code => "HBY", :website_address => "https://www.nzx.com/markets/NZSX/securities/HBY"},
 {:name => "Henderson Far East Income Limited Ordinary Shares", :code => "HFL", :website_address => "https://www.nzx.com/markets/NZSX/securities/HFL"},
 {:name => "Hallenstein Glasson Holdings Limited Ordinary Shares", :code => "HLG", :website_address => "https://www.nzx.com/markets/NZSX/securities/HLG"},
-{:name => "Heartland New Zealand Limited Ordinary Shares", :code => "HNZ", :website_address => "https://www.nzx.com/markets/NZSX/securities/HNZ"},
+{:name => "Heartland Bank Limited Ordinary Shares", :code => "HBL", :website_address => "https://www.nzx.com/markets/NZSX/securities/HBL"},
 {:name => "Infratil Limited Ordinary Shares", :code => "IFT", :website_address => "https://www.nzx.com/markets/NZSX/securities/IFT"},
 {:name => "ikeGPS Group Limited (NS) Ordinary Shares", :code => "IKE", :website_address => "https://www.nzx.com/markets/NZSX/securities/IKE"},
 {:name => "Intueri Education Group Limited Ordinary Shares", :code => "IQE", :website_address => "https://www.nzx.com/markets/NZSX/securities/IQE"},
@@ -155,7 +155,7 @@ Share.seed(:id,
 {:name => "Trade Me Group Limited Ordinary Shares", :code => "TME", :website_address => "https://www.nzx.com/markets/NZSX/securities/TME"},
 {:name => "Turners Limited Ordinary Shares", :code => "TNR", :website_address => "https://www.nzx.com/markets/NZSX/securities/TNR"},
 {:name => "SmartTENZ", :code => "TNZ", :website_address => "https://www.nzx.com/markets/NZSX/securities/TNZ"},
-{:name => "Transpacific Industries Group Ltd Ordinary Shares", :code => "TPI", :website_address => "https://www.nzx.com/markets/NZSX/securities/TPI"},
+#{:name => "Transpacific Industries Group Ltd Ordinary Shares", :code => "TPI", :website_address => "https://www.nzx.com/markets/NZSX/securities/TPI"},
 {:name => "Trustpower Limited Ordinary Shares", :code => "TPW", :website_address => "https://www.nzx.com/markets/NZSX/securities/TPW"},
 {:name => "TRS Investments Limited", :code => "TRS", :website_address => "https://www.nzx.com/markets/NZSX/securities/TRS"},
 {:name => "TeamTalk Limited Ordinary Shares", :code => "TTK", :website_address => "https://www.nzx.com/markets/NZSX/securities/TTK"},
@@ -183,9 +183,8 @@ puts 'Finished Seeding Shares'
 
 puts 'Seeding further share details'
 Share.all.each do | s | 
-  puts 'First Time Load: ${s.name}'
+  puts "First Time Load: #{s.name}"
   s.first_time_load!
 end
 
 puts 'Finished Seeding further share details'
-

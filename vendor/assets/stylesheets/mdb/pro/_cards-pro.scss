@@ -1,0 +1,127 @@
+/*********************
+  CARDS PREMIUM
+**********************/
+
+/* Elegant cards */
+
+.elegant-card {
+    margin: $element-top-margin 0 $element-bottom-margin 0;
+    position: relative;
+    perspective: 800px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    .card-up {
+        overflow: hidden;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -o-border-radius: 2px;
+        border-radius: 2px;
+    }
+    .btn-floating {
+        margin: -2.1em 2em;
+        float: right;
+    }
+    .card-content {
+        padding: 2em;
+        color: #666666;
+        background-color: #fff;
+        h5 {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eeeeee;
+        }
+        p {
+            font-size: 15px;
+            line-height: 1.571428;
+            font-weight: 300;
+        }
+    }
+    .card-footer {
+        background-color: $stylish-color-dark;
+        height: 50px;
+        color: #fff;
+        text-align: center;
+        font-size: 15px;
+        ul {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            .fa {
+                margin-right: 5px;
+            }
+            a {
+                color: #fff;
+            }
+        }
+    }
+    .card-label {
+        margin-bottom: -27px;
+        margin-top: 0;
+        z-index: 10;
+        position: relative;
+        .label {
+            border-radius: 0;
+            font-weight: 300;
+        }
+    }
+    .card-details {
+        color: #666;
+        a {
+            color: #666;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .elegant-card {
+        .card-up {
+            max-height: 150px;
+        }
+        .card-content {
+            padding: 1em;
+        }
+    }
+}
+
+/* Testimonial cards */
+
+.testimonial-card {
+   margin: $element-top-margin 0 $element-bottom-margin 0;
+    position: relative;
+    background-color: #fff;
+    .card-up {
+        overflow: hidden;
+        height: 120px;
+    }
+    .avatar {
+        border-radius: 50%;
+        display: block;
+        height: 120px;
+        margin: -65px auto 0;
+        overflow: hidden;
+        width: 120px;
+    }
+    .avatar img {
+        border: 5px solid #fff;
+        background: none repeat scroll 0 0 #FFFFFF;
+        width: 100%;
+    }
+    .card-content {
+        padding: 1em;
+        color: #666666;
+        background-color: #fff;
+        text-align: center;
+        h5 {
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eeeeee;
+        }
+        p {
+            font-size: 15px;
+            line-height: 1.571428;
+            font-weight: 300;
+        }
+    }
+    
+}
+

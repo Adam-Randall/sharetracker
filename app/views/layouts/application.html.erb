@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Sharetracker</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <%= render "navbar" %>
- <%= render 'shared/flash_messages', flash: flash %>
+  <head>
+    <title>Sharetracker</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <%= render "application/navbar" %>
+    <%= render "application/home_section" %>
+    <script>
+        new WOW().init();
+    </script>
+    
+    <%= yield %>
+    <%= render 'shared/flash_messages', flash: flash %>
 
-<%= yield %>
 
-</body>
+
+
+
+  </body>
 </html>

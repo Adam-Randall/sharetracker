@@ -1,0 +1,140 @@
+/*********************
+  Social Buttons
+**********************/
+
+.btn-sm {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    padding: 8px;
+    cursor: pointer;
+    outline: none !important;
+    @extend .z-depth-1;
+    @include transition(.2s ease-out);
+    &:hover {
+        @extend .z-depth-2;
+        color: #fff
+    }
+    &:focus {
+        color: #fff;
+    }
+    .fa {
+        font-size: 22px;
+        width: 16px;
+        @include transition-duration(0.4s);
+    }
+    &:hover .fa {
+        @include transform(scale(1.1));
+    }
+    span {
+        margin-left: 8px;
+    }
+}
+ 
+.btn-sm-full {
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    padding: 8px;
+    cursor: pointer;
+    outline: none !important;
+    @extend .z-depth-1;
+    @include transition(.2s ease-out);
+    &:hover {
+        @extend .z-depth-2;
+        color: #fff
+    }
+    &:focus {
+        color: #fff;
+    }
+    .fa {
+        font-size: 22px;
+        width: 16px;
+    }
+    span {
+        margin-left: 8px;
+    }
+}
+
+.rectangle {
+    color: #fff;
+    padding: 10px 32px 10px 32px;
+    @include border-radius(2px);
+}
+
+
+
+/* SOCIAL COLORS */
+
+/* Buttons */
+
+.fb-bg {
+    background-color: $fb-color;
+    &:hover {
+        background-color: lighten($fb-color, 5%);
+    }
+}
+
+.gplus-bg {
+    background-color: $gplus-color;
+    &:hover {
+        background-color: lighten($gplus-color, 5%);
+    }
+}
+
+.tw-bg {
+    background-color: $tw-color;
+    &:hover {
+        background-color: lighten($tw-color, 5%);
+    }
+}
+
+.li-bg {
+    background-color: $li-color;
+    &:hover {
+        background-color: lighten($li-color, 5%);
+    }
+}
+
+.yt-bg {
+    background-color: $yt-color;
+    &:hover {
+        background-color: lighten($yt-color, 5%);
+    }
+}
+
+.ins-bg {
+    background-color: $ins-color;
+    &:hover {
+        background-color: lighten($ins-color, 5%);
+    }
+}
+
+.pin-bg {
+    background-color: $pin-color;
+    &:hover {
+        background-color: lighten($pin-color, 5%);
+    }
+}
+
+.git-bg {
+    background-color: $git-color;
+    &:hover {
+        background-color: lighten($git-color, 5%);
+    }
+}
+
+.comm-bg {
+    background-color: $comm-color;
+    &:hover {
+        background-color: lighten($comm-color, 5%);
+    }
+}
+
+.email-bg {
+    background-color: $stylish-color;
+    &:hover {
+        background-color: lighten($stylish-color, 5%);
+    }
+}

@@ -1,0 +1,149 @@
+/*!
+ *
+ *
+ * Material Design for Bootstrap
+ * www.mdbootstrap.com
+ *
+ *
+ */
+
+
+/*********************
+  VARIABLES
+**********************/
+
+$primary-tem-color: #405C84;
+$secondary-tem-color: #0E274D;
+$extra-tem-color: #2E2E2E;
+
+/*********************
+  GENERAL
+**********************/
+ 
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0; 
+}
+
+
+/*********************
+  MAIN IMAGE
+**********************/
+
+.full-bg-img {
+    /* http://www.shutterstock.com/pic-197248445/stock-vector-gas-production-vector-illustration-of-financial-graph-chart.html?src=XqsuAQSyt3CkdQgPSpC-dw-1-14 */
+    background: url("Selection_071.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: -50px;
+    height: 100%;
+    width: 100%;
+    .container {
+        padding-top: 80px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .full-bg-img, .view {
+        height: auto;
+        position: relative;
+        text-align: center;
+        .verticalcenter {
+            top: none;
+            margin-top: 40px;
+            -webkit-transform: none;
+            -o-transform: none;
+            transform: none;
+        }
+        .container {
+            padding-top: 30px;
+        }
+    }
+}
+
+
+/*********************
+  TEMPLATE COLORS
+**********************/
+
+.pt-color {
+    background-color: $primary-tem-color!important;
+}
+
+.st-color {
+    background-color: $secondary-tem-color!important;
+}
+
+.et-color {
+    background-color: $extra-tem-color!important;
+}
+
+.btn-ptc {
+    background-color: $primary-tem-color!important;
+    &:hover {
+        background-color: lighten($primary-tem-color, 10%)!important;
+    }
+    &:focus {
+        background-color: lighten($primary-tem-color, 10%)!important;
+    }
+}
+
+.btn-stc {
+    background-color: $secondary-tem-color!important;
+    &:hover {
+        background-color: lighten($secondary-tem-color, 10%)!important;
+    }
+    &:focus {
+        background-color: lighten($secondary-tem-color, 10%)!important;
+    }
+}
+
+.btn-etc {
+    background-color: $extra-tem-color!important;
+    &:hover {
+        background-color: lighten($extra-tem-color, 10%)!important;
+    }
+    &:focus {
+        background-color: lighten($extra-tem-color, 10%)!important;
+    }
+}
+
+
+/*********************
+  COMPONENTS
+**********************/
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: $primary-tem-color!important;
+        .navbar-nav > li > a {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: #fff!important;
+        }
+    }
+}
+
+.top-nav-collapse {
+    background-color: $primary-tem-color;
+    .nav li a {
+        color: #fff;
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $secondary-tem-color;
+        }
+    }
+}
+
+.btn-floating,
+.carousel-indicators li {
+    background-color: $secondary-tem-color!important;
+}
