@@ -1,0 +1,41 @@
+<div id="login-page" class="card-panel">
+  <!--Header-->
+  <div class="modal-header text-center">
+    <h4><i class="fa fa-user"></i> Login:</h4>
+    <%= render 'shared/flash_messages', flash: flash %>
+  </div>
+  <!--/.Header-->
+  <!--Body-->
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-md-12">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="input-field">
+            <i class="material-icons prefix">email</i>
+            <%= f.label "Your email", for: "icon_email" %>
+            <%= f.email_field :email, autofocus: true, id: "icon_email", class: "validate" %>
+          </div>
+          <div class="input-field">
+            <i class="material-icons prefix">fingerprint</i>
+            <%= f.label "Your password" %>
+            <%= f.password_field :password, autocomplete: "off", class: "validate" %>
+          </div>
+          <div class="text-center">
+            <button onclick="hideLoginPage()" id="sign-up" type="button" class="btn btn-primary btn-lg btn-ptc waves-effect waves-light">Sign up</button>
+            <%= f.button  "Login", class: "btn btn-primary btn-lg btn-ptc waves-effect waves-light" %>
+            <div class="subscription-checkbox">
+              <form action="#">
+                <input type="checkbox" id="test7" />
+                <label for="test7">
+                  <p>Remember Me</p>
+                </label>
+              </form>
+            </div>
+          <% end %>
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Form-->
+</div>

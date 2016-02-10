@@ -15,5 +15,7 @@
 //= require mdb.min
 //= require smooth-scroll
 //= require jquery_ujs
+//= require js.cookie
+//= require login
 //= require turbolinks
 //= require_tree .

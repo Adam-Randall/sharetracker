@@ -11,18 +11,22 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
-    <%= render "application/navbar" %>
-    <%= render "application/home_section" %>
-    <script>
+
+    <% if user_signed_in? %>
+          Logged in as <strong><%= current_user.name %></strong> |
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'navbar-link'  %>
+      <%= yield %>
+    <% else %>
+
+      <%= render "application/navbar" %>
+      <%= render "application/home_section" %>
+      <%= render "application/default" %>
+
+      <script>
         new WOW().init();
-    </script>
-    
-    <%= yield %>
-    <%= render 'shared/flash_messages', flash: flash %>
+      </script>
 
-
-
-
+    <% end %>
 
   </body>
 </html>

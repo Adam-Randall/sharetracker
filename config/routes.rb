@@ -10,7 +10,8 @@ Rails.application.routes.draw do
    get 'shares/index' => 'shares'
    get 'shares/:id' => 'shares#show', as: :show_share
 
-   root 'users#index'
+   #root 'users#index'
+   root 'shares#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

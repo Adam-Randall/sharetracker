@@ -15,7 +15,8 @@
           <!--/.Content-->
           <!--Form-->
           <div class="col-md-6 wow fadeInRight">
-            <%= render "devise/registrations/new" %> -->
+            <%= render "devise/registrations/new" %>
+            <%= render "devise/sessions/new" %>
           </div>
           <!--/.Form-->
         </div>
@@ -26,3 +27,8 @@
   <!--/.Mask-->
 </section>
 <!--/. Intro image -->
+
+<script>
+  $('.card-panel').hide();
+  $('#registration-page').show();
+</script

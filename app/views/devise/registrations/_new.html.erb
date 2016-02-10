@@ -1,81 +1,46 @@
-<div class="card-panel">
+<div id="registration-page" class="card-panel">
   <!--Header-->
   <div class="modal-header text-center">
     <h4><i class="fa fa-user"></i> Register with:</h4>
+    <%= render 'shared/flash_messages', flash: flash %>
     <a class="btn-floating btn-large fb-bg waves-effect waves-light"><i class="fa fa-facebook"> </i></a>
     <a class="btn-floating btn-large tw-bg waves-effect waves-light"><i class="fa fa-twitter"> </i></a>
     <a class="btn-floating btn-large gplus-bg waves-effect waves-light"><i class="fa fa-google-plus"> </i></a>
     <a class="btn-floating btn-large li-bg waves-effect waves-light"><i class="fa fa-linkedin"> </i></a>
     <a class="btn-floating btn-large git-bg waves-effect waves-light"><i class="fa fa-github"> </i></a>
   </div>
-  <!--/.Header-->
-  <!--Body-->
   <div class="modal-body">
     <div class="row">
       <div class="col-md-12">
-        <!--Form-->
-        <form>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <h4 class="text-center">or:</h4>
           <div class="input-field">
             <i class="material-icons prefix">account_circle</i>
-            <input id="icon_prefix" type="text" class="validate">
-            <label for="icon_prefix">Your name</label>
+            <%= f.text_field :name, autofocus: true, id: "icon_prefix", class: "validate" %>
+            <%= f.label 'Your name', for: "icon_prefix" %><br />
           </div>
           <div class="input-field">
             <i class="material-icons prefix">email</i>
-            <input id="icon_email" type="tel" class="validate">
-            <label for="icon_email">Your email</label>
+            <%= f.email_field :email, autofocus: true, id: "icon_email", class: "validate" %>
+            <%= f.label 'Your email', for: "icon_email" %><br />
           </div>
           <div class="input-field">
             <i class="material-icons prefix">fingerprint</i>
-            <input id="icon_password" type="tel" class="validate">
-            <label for="icon_password">Your password</label>
+            <%= f.password_field :password, autofocus: true, id: "icon_password", class: "validate" %>
+            <%= f.label 'Your password', for: "icon_password" %>
           </div>
           <div class="text-center">
-            <button type="button" class="btn btn-primary btn-lg btn-ptc waves-effect waves-light">Sign up</button>
-            <button type="button" class="btn btn-primary btn-lg btn-ptc waves-effect waves-light">Login</button>
+            <button type="submit" name="commit" class="btn btn-primary btn-lg btn-ptc waves-effect waves-light">Sign Up</button>
+            <button onclick="hideRegistrationPage()" id="login" type="button" class="btn btn-primary btn-lg btn-ptc waves-effect waves-light">Login</button>
             <div class="subscription-checkbox">
-              <form action="#">
-                <input type="checkbox" id="test6" />
-                <label for="test6">
-                  <p>Subscribe me to the Newsletter</p>
-                </label>
-              </form>
+              <%= f.check_box :subscribe, id: "subscribe" %>
+              <label for="subscribe">
+                <p>Subscribe me to Daily Updates</p>
+              </label>
             </div>
           </div>
-        </form>
-        <!--/.Form-->
+        <% end %>
       </div>
     </div>
   </div>
-  <!--/.Body-->
 </div>
-<!-- <h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %> -->

@@ -1,7 +1,7 @@
 <div id="flash-anchor"></div>
 <% flash.each do |type, message| %>
   <div class="row">
-    <div class="alert <%= flash_class(type) %> col-sm-6 col-sm-offset-3 alert-fade">
+    <div class="alert <%= flash_class(type) %> col-sm-10 col-sm-offset-1 alert-fade">
       <button class="close" data-dismiss="alert">×</button>
       <%= message %>
     </div>
