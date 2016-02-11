@@ -21,7 +21,7 @@ gem 'seed-fu'
 gem 'sidetiq'
 gem 'foreman'
 gem 'unicorn-rails'
-
+gem 'omniauth-facebook'
 gem "font-awesome-rails"
 
 

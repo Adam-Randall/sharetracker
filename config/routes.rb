@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+ #devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+  
+  Rails.application.routes.draw do
+    devise_for :users, controllers: {
+  #    sessions: 'users/sessions',
+      registrations: 'users/registrations'
+    }
+  end
 
   resource :shares
   # The priority is based upon order of creation: first created -> highest priority.
@@ -7,11 +14,13 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
-   get 'shares/index' => 'shares'
-   get 'shares/:id' => 'shares#show', as: :show_share
+  get 'shares/index' => 'shares'
+  get 'shares/:id' => 'shares#show', as: :show_share
 
-   #root 'users#index'
-   root 'shares#index'
+  delete 'registered' => 'devise/sessions#destroy'
+
+  #root 'users#index'
+  root 'shares#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

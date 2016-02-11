@@ -76,6 +76,13 @@
     }
 }
 
+.wl-bg {
+    background-color: $wl-color;
+    &:hover {
+        background-color: lighten($wl-color, 5%);
+    }
+}
+
 .gplus-bg {
     background-color: $gplus-color;
     &:hover {

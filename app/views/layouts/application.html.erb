@@ -13,8 +13,9 @@
   <body>
 
     <% if user_signed_in? %>
-          Logged in as <strong><%= current_user.name %></strong> |
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'navbar-link'  %>
+      Logged in as <strong><%= current_user.name %></strong> | 
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'navbar-link'  %>
+      <%= render 'shared/flash_messages', flash: flash %>
       <%= yield %>
     <% else %>
 

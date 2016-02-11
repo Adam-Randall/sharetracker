@@ -20,4 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  custom:
+    registration:
+      error:
+        missing_params: "Name, email and password must be entered to register."
+        password_length: "Password must be atleast 8 characters long."
+        email_taken: "Current email already registered to an account."
