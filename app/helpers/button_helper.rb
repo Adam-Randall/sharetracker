@@ -6,4 +6,10 @@ module ButtonHelper
     end
   end
 
+  def social_button(url, icon)
+    link_to(url, class: 'btn-floating btn-large fb-bg waves-effect waves-light') do
+      fa_icon("fa-#{icon}", class: "fa fa-#{icon}")
+    end
+  end
+
 end

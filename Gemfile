@@ -21,7 +21,12 @@ gem 'seed-fu'
 gem 'sidetiq'
 gem 'foreman'
 gem 'unicorn-rails'
+gem 'omniauth-oauth2', '1.3.1'
 gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-gplus'
+gem 'omniauth-linkedin-oauth2'
+gem 'omniauth-windowslive'
 gem "font-awesome-rails"
 
 

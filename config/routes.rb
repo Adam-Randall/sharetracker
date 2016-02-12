@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
- #devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
-  
-  Rails.application.routes.draw do
-    devise_for :users, controllers: {
-  #    sessions: 'users/sessions',
-      registrations: 'users/registrations'
-    }
-  end
+  #devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+  devise_for :users,
+  controllers: {
+    #    sessions: 'users/sessions',
+    registrations: 'users/registrations',
+    omniauth_callbacks: 'users/omniauth_callbacks'
+  }
 
   resource :shares
   # The priority is based upon order of creation: first created -> highest priority.

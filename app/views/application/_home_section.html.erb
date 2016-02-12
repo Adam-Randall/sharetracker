@@ -22,10 +22,10 @@
                 <div id="login-heading"><h4><i class="fa fa-user"></i> Login:</h4></div>
                 <%= render 'shared/flash_messages', flash: flash %>
                 <div id="registration-heading-2">
-                  <a class="btn-floating btn-large fb-bg waves-effect waves-light"><i class="fa fa-facebook"> </i></a>
-                  <a class="btn-floating btn-large tw-bg waves-effect waves-light"><i class="fa fa-twitter"> </i></a>
-                  <a class="btn-floating btn-large gplus-bg waves-effect waves-light"><i class="fa fa-google-plus"> </i></a>
-                  <a class="btn-floating btn-large li-bg waves-effect waves-light"><i class="fa fa-linkedin"> </i></a>
+                  <%= social_button(user_omniauth_authorize_path(:facebook), "facebook") %>
+                  <%= social_button(user_omniauth_authorize_path(:twitter), "twitter") %>
+                  <%= social_button(user_omniauth_authorize_path(:gplus), "google-plus") %>
+                  <%= social_button(user_omniauth_authorize_path(:linkedin), "linkedin") %>
                   <a class="btn-floating btn-large wl-bg waves-effect waves-light"><i class="fa fa-windows"> </i></a>
                 </div>
               </div>
