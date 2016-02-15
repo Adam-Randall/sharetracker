@@ -30,7 +30,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       clean_up_passwords resource
       set_minimum_password_length
 
-      flash[:error] = error_message(sign_up_params)
+      flash[:error] = ErrorMessage.registration(sign_up_params, false)
       redirect_to new_user_registration_path
     end
   end
@@ -84,15 +84,4 @@ class Users::RegistrationsController < Devise::RegistrationsController
     after_inactive_sign_up_path_for(resource)
   end
 
-  private
-  def error_message(sign_up_params)
-    if sign_up_params[:email].empty? || sign_up_params[:password].empty? || sign_up_params[:name].empty?
-      error_message = I18n.t("custom.registration.error.missing_params")
-    elsif sign_up_params[:password].length < set_minimum_password_length
-      error_message = I18n.t("custom.registration.error.password_length")
-    elsif User.find_by(email: sign_up_params[:email]).present?
-      error_message = I18n.t("custom.registration.error.email_taken")
-    end
-    error_message
-  end
 end

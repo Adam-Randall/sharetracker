@@ -26,3 +26,4 @@ en:
         missing_params: "Name, email and password must be entered to register."
         password_length: "Password must be atleast 8 characters long."
         email_taken: "Current email already registered to an account."
+        invalid_omniauth: "Unable to register account by this method at this time. Please try and alternative method, or try again later."

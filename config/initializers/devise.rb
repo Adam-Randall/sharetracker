@@ -267,4 +267,5 @@ Devise.setup do |config|
   config.omniauth :twitter, "#{Rails.application.secrets[:twitter_api_id]}", "#{Rails.application.secrets[:twitter_api_secret]}"
   config.omniauth :gplus, "#{Rails.application.secrets[:gplus_api_id]}", "#{Rails.application.secrets[:gplus_api_secret]}", scope: 'userinfo.email, userinfo.profile'
   config.omniauth :linkedin, "#{Rails.application.secrets[:linkedin_api_id]}", "#{Rails.application.secrets[:linkedin_api_secret]}"
+  config.omniauth :windowslive, "#{Rails.application.secrets[:windowslive_api_id]}", "#{Rails.application.secrets[:windowslive_api_secret]}", :scope => 'wl.basic'
 end

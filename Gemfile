@@ -52,6 +52,11 @@ group :development, :test do
   gem 'awesome_print'
   gem 'railties'
 
+  gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'database_cleaner'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'pry-nav'

@@ -21,12 +21,12 @@
                 <div id="registration-heading-1"><h4><i class="fa fa-user"></i> Register with:</h4></div>
                 <div id="login-heading"><h4><i class="fa fa-user"></i> Login:</h4></div>
                 <%= render 'shared/flash_messages', flash: flash %>
-                <div id="registration-heading-2">
+                <div >
                   <%= social_button(user_omniauth_authorize_path(:facebook), "facebook") %>
                   <%= social_button(user_omniauth_authorize_path(:twitter), "twitter") %>
                   <%= social_button(user_omniauth_authorize_path(:gplus), "google-plus") %>
                   <%= social_button(user_omniauth_authorize_path(:linkedin), "linkedin") %>
-                  <a class="btn-floating btn-large wl-bg waves-effect waves-light"><i class="fa fa-windows"> </i></a>
+                  <%= social_button(user_omniauth_authorize_path(:windowslive), "windows") %>
                 </div>
               </div>
              
